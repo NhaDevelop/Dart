@@ -1,14 +1,25 @@
+enum Side {
+  north("North"),
+  east("East"),
+  south("South"),
+  west("West");
+
+  final String label;
+  const Side(this.label);
+  String toString() => label;
+}
 
 class Window {
   int floor;
   String color;
-  String side;
+  Side side;
   Window(this.color, this.side, this.floor);
 
   void display() {
     print('Window $color on $side side, Floor: $floor');
   }
 }
+
 //class roof
 class Roof {
   String type;
@@ -19,6 +30,7 @@ class Roof {
     print('Roof type: $type');
   }
 }
+
 //class door
 class Door {
   String color;
@@ -43,12 +55,11 @@ class House {
   List<Window> windows;
   Roof roof;
   Door door;
-  Chimney? chimney;
+  Chimney chimney;
 
   House(this.windows, this.roof, this.door, this.chimney);
 
-
-  get hasChimney => this.chimney!=null;
+  // get hasChimney => this.chimney != null;
   void displayHouse() {
     print("My House");
     roof.display();
@@ -60,10 +71,10 @@ class House {
 }
 
 void main() {
-  Window window1 = Window('Red', 'Left', 1);
-  Window window2 = Window('Green', 'Right', 1);
-  Window window3 = Window('Red', 'Left', 2);
-  Window window4 = Window('Green', 'Right', 2);
+  Window window1 = Window('Red', Side.east, 1);
+  Window window2 = Window('Green', Side.north, 1);
+  Window window3 = Window('Red', Side.west, 2);
+  Window window4 = Window('Green', Side.south, 2);
 
   Roof roof = Roof('Triangle');
   Door door = Door('Black');
@@ -71,12 +82,12 @@ void main() {
   House house1 =
       House([window1, window2, window3, window4], roof, door, chimney);
   house1.displayHouse();
-  Window window5 = Window('Blue', 'Left', 1);
-  Window window6 = Window('Blue', 'Right', 1);
+  Window window5 = Window('Blue', Side.east, 1);
+  Window window6 = Window('Blue', Side.north, 1);
   Roof flatRoof = Roof('Flat');
   Door blackDoor = Door('Black');
   Chimney noChimney = Chimney(false);
 
   House house2 = House([window5, window6], flatRoof, blackDoor, noChimney);
-  house2.displayHouse();   
+  house2.displayHouse();
 }
