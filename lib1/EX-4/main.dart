@@ -42,7 +42,7 @@ class CustomCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return Container( 
       margin: const EdgeInsets.symmetric(vertical: 10), // Vertical spacing
       padding: const EdgeInsets.all(20), // Padding inside the container
       decoration: BoxDecoration(

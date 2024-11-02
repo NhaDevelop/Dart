@@ -34,32 +34,3 @@ class MyWidget extends StatelessWidget {
     );
   }
 }
-
-void main() {
-  runApp(const MaterialApp(
-    home: Scaffold(
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            MyWidget(
-              buttonName: 'OOP',
-              startColor: 0xff4E7DF5,
-              endColor: 0xff0B3CBD,
-            ),
-            MyWidget(
-              buttonName: 'Flutter',
-              startColor: 0xff4E7DF5,
-              endColor: 0xff4E7DF5,
-            ),
-            MyWidget(
-              buttonName: 'Dart',
-              startColor: 0xff4E7DF5,
-              endColor: 0xff4E7DF5,
-            ),
-          ],
-        ),
-      ),
-    ),
-  ));
-}
