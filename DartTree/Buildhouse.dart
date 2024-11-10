@@ -6,6 +6,7 @@ enum Side {
 
   final String label;
   const Side(this.label);
+  @override
   String toString() => label;
 }
 
@@ -65,7 +66,9 @@ class House {
     roof.display();
     door.display();
     chimney.toString();
-    windows.forEach((window) => window.toString());
+    for (var window in windows) {
+      window.toString();
+    }
     print('---------------------');
   }
 }

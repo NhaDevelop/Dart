@@ -35,10 +35,10 @@ void main() {
               ),
             ),
             Container(
-              padding: EdgeInsets.all(30),
+              padding: const EdgeInsets.all(30),
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(35),
-                  gradient: LinearGradient(
+                  gradient: const LinearGradient(
                       colors: [Color(0xff4E7DF5), Color(0xff0B3CBD)])),
               child: const Text(
                 "HELLO3",

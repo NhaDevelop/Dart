@@ -8,9 +8,9 @@ enum Skill {
 }
 
 class AddressEmp {
-  String _street;
-  String _city;
-  int _zipCode;
+  final String _street;
+  final String _city;
+  final int _zipCode;
   AddressEmp(this._street, this._city, this._zipCode);
 
   String get street => _street;
@@ -50,7 +50,7 @@ class Employee {
   }
 
   void printDetails() {
-    print('Employee: $name, Base Salary: \$${baseSalary}, $yearOfExperience years');
+    print('Employee: $name, Base Salary: \$$baseSalary, $yearOfExperience years');
     print('Skills: ${skills.map((skill) => skill.name).join(', ')}');
     print('Total Computed Salary: \$${computeSalary()}');
   }

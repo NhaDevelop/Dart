@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-// Enum for different weather conditions
+
 enum WeatherCondition { sunny, rainy, cloudy, snowy }
 
 class WeatherForecast extends StatelessWidget {
@@ -17,7 +17,7 @@ class WeatherForecast extends StatelessWidget {
     required this.maxTemp,
   });
 
-  // Method to get the appropriate icon based on the weather condition
+ 
   IconData getWeatherIcon() {
     switch (condition) {
       case WeatherCondition.sunny:
@@ -32,8 +32,6 @@ class WeatherForecast extends StatelessWidget {
         return Icons.wb_sunny;
     }
   }
-
-  // Method to get the background color based on the weather condition
   Color getBackgroundColor() {
     switch (condition) {
       case WeatherCondition.sunny:
@@ -53,8 +51,8 @@ class WeatherForecast extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: 80,
-      margin: const EdgeInsets.symmetric(horizontal: 4.0),
-      padding: const EdgeInsets.all(8.0),
+      margin: const EdgeInsets.symmetric(horizontal: 2.0),
+      padding: const EdgeInsets.all(8.10),
       decoration: BoxDecoration(
         color: getBackgroundColor(),
         borderRadius: BorderRadius.circular(12),

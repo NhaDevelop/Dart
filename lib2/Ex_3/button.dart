@@ -62,6 +62,8 @@ class CustomButton extends StatelessWidget {
 }
 
 class CustomButtonDemo extends StatelessWidget {
+  const CustomButtonDemo({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -88,7 +90,7 @@ class CustomButtonDemo extends StatelessWidget {
               },
             ),
             const SizedBox(height: 16),
-            CustomButton(
+            const CustomButton(
               buttonType: ButtonType.disabled,
               text: 'Account',
               icon: Icons.account_circle,
