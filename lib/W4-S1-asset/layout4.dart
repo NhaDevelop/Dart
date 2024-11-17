@@ -9,6 +9,8 @@ void main() {
 }
 
 class MyLayout extends StatelessWidget {
+  const MyLayout({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Column(

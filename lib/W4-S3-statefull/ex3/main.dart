@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 List<String> images = [
-  "assets/IMG/bird.jpg",
+  // "assets/IMG/bird.jpg",
   "assets/IMG/bird2.jpg",
   "assets/IMG/insect.jpg",
   "assets/IMG/girl.jpg",
