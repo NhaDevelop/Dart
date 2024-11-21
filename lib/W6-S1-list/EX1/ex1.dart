@@ -51,7 +51,7 @@ class LoopingWidgetsExample extends StatelessWidget {
             children: [
               const Text("Start"),
            
-              ...["MON", "TUE", "WED", "THU"]
+              ...["red", "blue", "green", "yellow"]
                   .map((item) => Text(item))  //map
                   ,
               const Text("End"),
