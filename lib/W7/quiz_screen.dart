@@ -19,7 +19,7 @@ class _QuizScreenState extends State<QuizScreen> {
 
   final List<Map<String, dynamic>> _questions = [
     {
-      'question': 'who is programing teacher ?',
+      'question': 'who is the best programing teacher ?',
       'choices': ['ronan', 'ronan', 'ronan'],
       'correctAnswer': 'ronan',
     },
