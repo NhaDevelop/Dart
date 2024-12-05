@@ -4,7 +4,7 @@ class ResultScreen extends StatelessWidget {
   final int score;
   final VoidCallback onRestartQuiz;
 
-  ResultScreen({required this.score, required this.onRestartQuiz});
+  const ResultScreen({super.key, required this.score, required this.onRestartQuiz});
 
   @override
   Widget build(BuildContext context) {
@@ -14,12 +14,12 @@ class ResultScreen extends StatelessWidget {
         children: [
           Text(
             'Your Score: $score/${3}',
-            style: TextStyle(fontSize: 24),
+            style: const TextStyle(fontSize: 24),
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           ElevatedButton(
             onPressed: onRestartQuiz,
-            child: Text('Restart Quiz'),
+            child: const Text('Restart Quiz'),
           ),
         ],
       ),

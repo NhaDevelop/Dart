@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class WelcomeScreen extends StatelessWidget {
   final VoidCallback onStartQuiz;
 
-   WelcomeScreen({super.key, required this.onStartQuiz});
+   const WelcomeScreen({super.key, required this.onStartQuiz});
 
   @override
   Widget build(BuildContext context) {
@@ -11,14 +11,14 @@ class WelcomeScreen extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text(
+          const Text(
             'Welcome to the Quiz App!',
             style: TextStyle(fontSize: 24),
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           ElevatedButton(
             onPressed: onStartQuiz,
-            child: Text('Start Quiz'),
+            child: const Text('Start Quiz'),
           ),
         ],
       ),

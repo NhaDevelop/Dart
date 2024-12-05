@@ -95,11 +95,11 @@ class _QuizScreenState extends State<QuizScreen> {
         break;
 
       default:
-        displayedWidget = Center(child: Text("Unknown State"));
+        displayedWidget = const Center(child: Text("Unknown State"));
     }
 
     return Scaffold(
-      appBar: AppBar(title: Text('Quiz App')),
+      appBar: AppBar(title: const Text('Quiz App')),
       body: displayedWidget,
     );
   }

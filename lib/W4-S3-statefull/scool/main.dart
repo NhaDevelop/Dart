@@ -5,13 +5,15 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Number List',
       home: Scaffold(
         appBar: AppBar(
-          title: Text('List of Numbers'),
+          title: const Text('List of Numbers'),
         ),
         body: NumberListWidget(),
       ),
@@ -20,6 +22,8 @@ class MyApp extends StatelessWidget {
 }
 
 class NumberListWidget extends StatelessWidget {
+  const NumberListWidget({super.key});
+
   @override
   Widget build(BuildContext context) {
     // Generate a list of numbers using map

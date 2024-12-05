@@ -1,4 +1,7 @@
 {
     "java.compile.nullAnalysis.mode": "automatic",
-    "cmake.sourceDirectory": "C:/Users/PC/experiment_app1/linux"
+    "cmake.sourceDirectory": "C:/Users/PC/experiment_app1/linux",
+    "cSpell.words": [
+        "noto"
+    ]
 }

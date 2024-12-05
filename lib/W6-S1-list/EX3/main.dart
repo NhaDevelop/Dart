@@ -28,7 +28,7 @@ class _TemperatureAppState extends State<TemperatureApp> {
       debugShowCheckedModeBanner: false,
       home: isWelcomeScreen
           ? WelcomeScreen(onStart: toggleScreen)
-          : TemperatureScreen(),
+          : const TemperatureScreen(),
     );
   }
 }

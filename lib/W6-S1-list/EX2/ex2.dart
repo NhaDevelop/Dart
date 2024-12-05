@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
 class ProfileApp extends StatelessWidget {
   final ProfileData profileData;
 
-  const ProfileApp({Key? key, required this.profileData}) : super(key: key);
+  const ProfileApp({super.key, required this.profileData});
 
   @override
   Widget build(BuildContext context) {
