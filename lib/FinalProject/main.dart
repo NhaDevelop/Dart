@@ -1,12 +1,21 @@
-
+import 'package:experiment_app1/FinalProject/Pages/cenima_main_screen.dart';
 import 'package:flutter/material.dart';
 
-import 'pages/intro_pages.dart';
-
 void main() {
-  runApp(
-    const MaterialApp(
-      home: (IntroPages()),
-    ),
-  );
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: const CinemaMainScreen(),
+    );
+  }
 }

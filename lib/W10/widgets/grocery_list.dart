@@ -1,3 +1,5 @@
+import 'package:experiment_app1/W10/widgets/fruitcard.dart';
+import 'package:experiment_app1/W10/widgets/new_item.dart';
 import 'package:flutter/material.dart';
 
 class Fruit {
@@ -32,22 +34,10 @@ class _GroceryListState extends State<GroceryList> {
         itemCount: fruits.length,
         itemBuilder: (context, index) {
           final fruit = fruits[index];
-          return Card(
-            color: fruit.color.withOpacity(0.2),
-            margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(15),
-            ),
-            child: ListTile(
-              title: Text(
-                fruit.label,
-                style: TextStyle(
-                  color: fruit.color,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              subtitle: Text('Quantity: ${fruit.quantity}'),
-            ),
+          return FruitCard(
+            label: fruit.label,
+            color: fruit.color,
+            quantity: fruit.quantity,
           );
         },
       );
@@ -58,7 +48,12 @@ class _GroceryListState extends State<GroceryList> {
         title: const Text('Your Groceries'),
         actions: [
           IconButton(
-            onPressed: () => {},
+            onPressed: () => {
+               Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const NewItem()),
+                ),
+             },
             icon: const Icon(Icons.add),
           ),
         ],

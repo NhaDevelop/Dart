@@ -149,14 +149,14 @@ class _ExpenseFormState extends State<ExpenseForm> {
                   const SizedBox(width: 10),
                   Text(
                     DateFormat.yMMMd().format(selectedDate),
-                    style: TextStyle(fontSize: 16),
+                    style: const TextStyle(fontSize: 16),
                   ),
                 ],
               ),
               const SizedBox(height: 20),
               DropdownButtonFormField<Category>(
                 value: selectedCategory,
-                hint: Text('Select a category'),
+                hint: const Text('Select a category'),
                 items: Category.values
                     .map((category) => DropdownMenuItem(
                           value: category,
@@ -176,23 +176,23 @@ class _ExpenseFormState extends State<ExpenseForm> {
                 children: [
                   ElevatedButton(
                     onPressed: onCancel,
-                    child: const Text('Cancel'),
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.redAccent,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10.0),
                       ),
                     ),
+                    child: const Text('Cancel'),
                   ),
                   ElevatedButton(
                     onPressed: onAdd,
-                    child: const Text('Save Expense'),
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.green,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10.0),
                       ),
                     ),
+                    child: const Text('Save Expense'),
                   ),
                 ],
               ),
